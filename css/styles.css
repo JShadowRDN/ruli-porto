@@ -10,14 +10,49 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
-  padding-bottom: 0 !important;
+.simple-navbar {
+  background-color: #19005e;
+  color: white;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.container-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.home-btn {
+  background-color: #d2ff00;
+  color: #19005e;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #bde000;
+}
+
+
 
 /* Hero Section */
 
 .hero-section {
-  background: radial-gradient(circle 700px at 72% 70%, #d2ff00, #0099ff51, #19005e);
+   background: 
+    radial-gradient(circle 700px at top center, #00599589 10%, #0a0221c7 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,14 +61,13 @@ body {
   color: white;
   display: flex;
   align-items: center;
-  max-height: 700px; /* atau tinggi yang kamu inginkan */
+  min-height: 100vh;
   overflow: hidden;}
 
-
-
 h1 {
-  font-size: 48px;
-  margin: 10px 0;
+  font-size: 50px;
+  font-weight:600 ;
+
 }
 
 .text-info {
@@ -73,239 +107,177 @@ h2 {
   color: white;
 }
 
-
-/* Image Side */
-.image {
-  position: relative;
+h1 {
+  font-size: 60px;
+  font-weight: 600;
 }
 
-.hero-img {
-  max-width: 450px; /* Atur ukuran sesuai keinginan: 300px, 250px, dsb */
-  height: auto;
-  display: block;
-  margin-left: 90px;
-  position: relative;
-  z-index: 1;
-  margin-top: 30px; /* naikkan gambar */
-
-
-}
-
-.glass-bg {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* tengah */
-  width: 400px;
-  height: 500px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 0;
-}
-
-.hero-img-container {
-  position: relative;
-  width: fit-content;
-  margin: 0 auto;
-}
-
+/* Ukuran untuk tablet */
 @media (max-width: 992px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 60px 20px;
-    max-height: unset;
+  h1 {
+    font-size: 48px;
   }
+}
 
-  .hero-img-container {
-    margin-top: 30px;
-  }
-
-  .hero-img {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .glass-bg {
-    width: 300px;
-    height: 400px;
-    top: 60%;
-  }
-
+/* Ukuran untuk HP landscape/sedang */
+@media (max-width: 768px) {
   h1 {
     font-size: 36px;
   }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  .desc {
-    font-size: 14px;
-  }
-
-  .btn {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
 }
 
+/* Ukuran untuk HP kecil */
 @media (max-width: 576px) {
-  .hero-section {
-    padding: 40px 15px;
-  }
-
-  .hero-img {
-    max-width: 320px;
-    margin-top: 10%;
-  }
-
-  .glass-bg {
-    width: 240px;
-    height: 320px;
-    top: 55%;
-  }
-
   h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  .desc {
-    font-size: 13px;
-  }
-
-  .btn {
-    padding: 7px 14px;
-    font-size: 13px;
+    font-size: 30px;
   }
 }
 
+/* ---- WHAT ---- */
 
-/* ------------- WHO AM I ------------------ */
-
-.who-am-i-section {
-  background: radial-gradient(circle 700px at bottom left, #d0ff00c7 0%, #0099ff51 60%, #19005e 100%);
+.what {
+   background: linear-gradient(#0a0221c7 10%, #00599589 100%);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #ffffff;
-  padding: 100px 20px;
-}
-
-
-.who-am-i-section .title {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #d2ff00;
-  margin-bottom: 30px;
-}
-
-.who-am-i-section .desc {
-  max-width: 800px;
-  margin: 0 auto 20px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #d0d0d0;
-}
-
-.btn-projects {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 30px;
-  background-color: #d2ff00;
-  color: #000;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-projects:hover {
-  background-color: #b7e000;
-  transform: scale(1.05);
-}
-
-/* ------------- SKILLS ------------------ */
-.skills {
-  background: radial-gradient(circle 700px at top right, #d0ff00c7 0%, #0099ff51 60%, #19005e 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #ffffff;
-  padding: 100px 20px;
-}
-
-h2 {
-    font-size: 3rem;
-  font-weight: 600;
-  color: #d2ff00;
-  margin-bottom: 30px;
-
-}
-.skill-card {
-  background-color: #1e293b;
-  border-radius: 12px;
-  padding: 20px 10px;
-  width: 120px;
-  height: 150px;
-  text-align: center;
-  margin: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.skill-card:hover {
+.role-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  text-align: left;
+}
+
+.role-box .emoji {
+  font-size: 48px;
+}
+
+.role-box ul {
+  list-style-type: square;
+  padding-left: 1.2rem;
+}
+
+.role-box ul li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.portfolio {
+    background: radial-gradient(circle 500px at bottom left, #0a0221c7, #00599589);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.portfolio h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.portfolio-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.portfolio-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.skill-card img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+.portfolio-card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.portfolio-card .card-body {
+  padding: 20px;
+}
+
+.portfolio-card .card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
   margin-bottom: 10px;
 }
 
-.skill-card p {
+.portfolio-card .card-text {
   font-size: 14px;
-  color: #cbd5e1;
-  margin: 0;
-  line-height: 1;
+  color: #555;
 }
 
-/* ------------- SOFT SKILLS ------------------ */
-
-.soft-skills {
-  background: 
-    radial-gradient(circle 700px at top left, #d0ff00ea 0%, #0099ff51 60%, #19005ec7 100%),
-    url('../img/bg-softskills.png'); /* Ganti dengan path gambar kamu */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  padding: 100px 20px;
+.modal-content img {
+  transition: transform 0.3s ease-in-out;
+}
+.modal-content img:hover {
+  transform: scale(1.02);
 }
 
-.skill-soft-card {
-  background: rgba(4, 0, 248, 0.153);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
 
-.skill-soft-card:hover {
-  transform: translateY(-8px);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .site-footer {
@@ -348,118 +320,4 @@ h2 {
     padding: 60px 15px;
   }
 
-}
-
-/* ------------- WORK EXPERINCE ------------------ */
-
-.experience {
-  background: linear-gradient(#00034ec7 0%, #19005e 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #ffffff;
-  padding: 100px 20px;
-}
-
-.experience h1 {
-  color: #d2ff00;
-}
-
-.folder-card {
-  position: relative;
-  width: 300px;
-  margin: 10px auto;
-  background-color: #f5c542;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  padding-top: 25px; /* ruang untuk tab */
-}
-
-.folder-tab {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 60px;
-  height: 25px;
-  background-color: #d9a517;
-  border-top-left-radius: 6px;
-}
-
-.folder-body {
-  padding: 20px;
-  text-align: left;
-}
-
-.folder-body h3 {
-  margin: 0 0 5px;
-  font-size: 20px;
-}
-
-.folder-body p {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
-}
-
-.folder-btn {
-  display: none;
-  margin-top: 10px;
-  padding: 8px 14px;
-  background-color: #19005e;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.5s ease;
-}
-
-.folder-btn:hover {
-  background-color: #3205a0;
-}
-
-.folder-card:hover .folder-btn {
-  display: inline-block;
-}
-
-
-@media (max-width: 768px) {
-  .folder-card {
-    width: 90%;
-  }
-.experience h1 {
-  color: #d2ff0a;
-  font-size: 50px;
-  font-weight: 600;
-}
-}
-
-.education-certification {
-  background: linear-gradient(to bottom, #10002b, #240046);
-  color: white;
-}
-
-.edu-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.edu-card:hover {
-  transform: translateY(-8px);
-}
-
-.edu-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-  color: #d2ff00;
-}
-
-.edu-year {
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 10px;
-  display: block;
 }
