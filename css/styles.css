@@ -308,13 +308,6 @@ h2 {
 }
 
 
-
-
-
-
-
-
-
 .site-footer {
   background: radial-gradient(circle at center, #19005e, #000020);
   color: #ffffff;
@@ -333,8 +326,6 @@ h2 {
   text-align: center;
 }
 
-
-
 .social-icons {
   margin-bottom: 20px;
 }
@@ -348,4 +339,127 @@ h2 {
 
 .social-icons a:hover {
   color: #d2ff00;
+}
+
+@media (max-width: 576px) {
+
+ .soft-skills {
+    background-position: top center;
+    padding: 60px 15px;
+  }
+
+}
+
+/* ------------- WORK EXPERINCE ------------------ */
+
+.experience {
+  background: linear-gradient(#00034ec7 0%, #19005e 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding: 100px 20px;
+}
+
+.experience h1 {
+  color: #d2ff00;
+}
+
+.folder-card {
+  position: relative;
+  width: 300px;
+  margin: 10px auto;
+  background-color: #f5c542;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding-top: 25px; /* ruang untuk tab */
+}
+
+.folder-tab {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 60px;
+  height: 25px;
+  background-color: #d9a517;
+  border-top-left-radius: 6px;
+}
+
+.folder-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.folder-body h3 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.folder-body p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.folder-btn {
+  display: none;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #19005e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.5s ease;
+}
+
+.folder-btn:hover {
+  background-color: #3205a0;
+}
+
+.folder-card:hover .folder-btn {
+  display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+  .folder-card {
+    width: 90%;
+  }
+.experience h1 {
+  color: #d2ff0a;
+  font-size: 50px;
+  font-weight: 600;
+}
+}
+
+.education-certification {
+  background: linear-gradient(to bottom, #10002b, #240046);
+  color: white;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-8px);
+}
+
+.edu-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #d2ff00;
+}
+
+.edu-year {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 10px;
+  display: block;
 }
