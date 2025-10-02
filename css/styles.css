@@ -16,19 +16,20 @@ body {
 
 /* ===== Navbar Custom Style ===== */
 .custom-navbar {
-  background-color: #0d056a;       /* warna background (bisa diganti) */
-  padding: 10px 0;             /* jarak atas bawah */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* bayangan bawah */
+  background-color: #0d056a;       
+  padding: 10px 0;             
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3); 
 }
 
 .custom-navbar .navbar-brand img {
-  max-height: 20px;            /* batas tinggi logo */
+  max-height: 35px;   /* ukuran default lebih besar */
   height: auto;
   width: auto;
+  transition: all 0.3s ease;
 }
 
 .custom-navbar .nav-link {
-  color: #fff;                 /* warna teks menu */
+  color: #fff;                 
   font-weight: 500;
   margin-left: 20px;
   transition: color 0.3s ease;
@@ -36,17 +37,68 @@ body {
 
 .custom-navbar .nav-link:hover,
 .custom-navbar .nav-link.active {
-  color: #0dcaf0;              /* warna saat hover / aktif */
+  color: #0dcaf0;              
 }
 
 .custom-navbar .navbar-toggler {
-  border: none;                /* hilangkan border tombol */
+  border: none;                
 }
 
 .custom-navbar .navbar-toggler-icon {
-  filter: invert(1);           /* ubah jadi putih */
+  filter: invert(1);           
 }
 
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet (max 992px) */
+@media (max-width: 992px) {
+  .custom-navbar {
+    padding: 8px 15px;
+  }
+
+  .custom-navbar .navbar-brand img {
+    max-height: 28px;  /* perkecil logo */
+  }
+
+  .custom-navbar .nav-link {
+    margin-left: 10px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+  .custom-navbar {
+    padding: 6px 10px;
+  }
+
+  .custom-navbar .navbar-brand img {
+    max-height: 25px;
+  }
+
+  /* Nav item jadi stack ke bawah */
+  .custom-navbar .navbar-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .custom-navbar .nav-link {
+    display: block;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Mobile (max 480px) */
+@media (max-width: 480px) {
+  .custom-navbar .navbar-brand img {
+    max-height: 22px;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 13px;
+  }
+}
 
 
 /* Hero Section */
@@ -179,6 +231,8 @@ h4 {
   .hero-img {
     max-width: 300px;
     margin: 0 auto;
+    margin-top: 90%; /* naikkan gambar */
+    margin-bottom: -10%;
   }
 
   .glass-bg {
@@ -189,10 +243,11 @@ h4 {
 
   h1 {
     font-size: 36px;
+    margin-top: 40px;
   }
 
-  h2 {
-    font-size: 28px;
+  h4 {
+    font-size: 15px;
   }
 
   .desc {
@@ -203,6 +258,11 @@ h4 {
     padding: 8px 16px;
     font-size: 14px;
   }
+ .btn-1 {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -728,6 +788,113 @@ h2 {
   margin: 0;
 }
 
+/* ========================
+   Responsive Skills Section
+======================== */
+
+/* Tablet (max 992px) */
+@media (max-width: 992px) {
+  .skills-section {
+    flex-direction: column;       /* stack jadi 1 kolom */
+    padding: 60px 40px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .skills-left h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  .skills-right {
+    grid-template-columns: 1fr 1fr; /* tetap 2 kolom tapi lebih kecil */
+    gap: 30px;
+  }
+
+  .skill-item {
+    border-left: none;            /* hilangkan garis */
+    border-top: 2px solid #d2ff00;
+    padding: 15px 0 0 0;
+  }
+
+  .skills-footer {
+    justify-content: center;
+  }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 50px 20px;
+    gap: 30px;
+  }
+
+  .skills-left h1 {
+    font-size: 32px;
+  }
+
+  .skills-right {
+    grid-template-columns: 1fr;   /* jadi 1 kolom */
+    gap: 20px;
+  }
+
+  .skill-item h3 {
+    font-size: 18px;
+  }
+
+  .skill-item p {
+    font-size: 13px;
+  }
+
+  .skills-footer img {
+    height: 35px;
+  }
+
+  .bnsp-box {
+    width: 100px;
+    padding: 10px;
+  }
+
+  .bnsp-box img {
+    height: 45px;
+  }
+}
+
+/* Extra Small Mobile (max 480px) */
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 40px 15px;
+  }
+
+  .skills-left h1 {
+    font-size: 26px;
+  }
+
+  .skills-footer {
+    gap: 12px;
+  }
+
+  .skills-footer img {
+    height: 40px;
+    margin-top: -20px;
+  }
+
+  .bnsp-box {
+    width: 90px;
+    padding: 8px;
+    margin-left: 40%; /* biar di tengah */
+  }
+
+  .bnsp-box img {
+    height: 45px;
+  }
+
+  .bnsp-box p {
+    font-size: 11px;
+  }
+}
+
+
 
 /* ------------- WORK EXPERINCE ------------------ */
 
@@ -842,3 +1009,44 @@ h2 {
   margin-top: 10px;
   display: block;
 }
+#gallery {
+  background: #08023f;
+  color: #fff;
+}
+
+.swiper {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.swiper-slide {
+  width: 450px;       /* fix lebar sesuai gambar */
+  height: 300px;      /* fix tinggi sesuai gambar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #111;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  overflow: hidden;
+  text-align: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* jaga proporsi */
+  border-radius: 10px 10px 0 0;
+}
+
+.swiper-slide p {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 14px;
+  padding: 8px;
+  margin: 0;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
